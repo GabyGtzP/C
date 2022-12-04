@@ -69,7 +69,7 @@ int NumElemsLista(Lista l){
          return 0;
       else
          return 1+NumElemsLista(resto(l));
-};
+}
 
 int NumElemsLista2(Lista l){
       int n=0;
@@ -78,7 +78,7 @@ int NumElemsLista2(Lista l){
              l=resto(l);
       }
       return n;
-};
+}
 
 int NumElemsLista3(Lista l){
       int n=0;
@@ -86,14 +86,14 @@ int NumElemsLista3(Lista l){
            l=resto(l);
 
       return n;
-};
+}
 
 void ImpLista(Lista l){
      if(!esvacia(l)){
           ImpElem(cabeza(l));
           ImpLista(resto(l));
      }
-};
+}
 
 Lista PegaListas(Lista l1, Lista l2){
      if(esvacia(l1))
@@ -119,7 +119,7 @@ int SonIguales(Lista a, Lista b){
                  else if(EsIgual(cabeza(a),cabeza(b)))
                          return SonIguales(resto(a),resto(b));
                       return 0;
-};
+}
 
 int EsPalindroma(Lista l){return SonIguales(l,Inviertelista(l));};
 Lista Insord(Elem e, Lista l){
@@ -129,7 +129,7 @@ Lista Insord(Elem e, Lista l){
              return cons(e,l);
           else
              return cons(cabeza(l),Insord(e,resto(l)));
-};
+}
 
 Lista OrdenaLista(Lista l){
     if(esvacia(l))
@@ -154,7 +154,7 @@ int Ocurrencias(Elem e, Lista l){
                 return 1+Ocurrencias(e,resto(l));
            else
                 return Ocurrencias(e,resto(l));
-};
+}
 
 Lista SubLista(Elem e, Lista l){
          if(esvacia(l))
