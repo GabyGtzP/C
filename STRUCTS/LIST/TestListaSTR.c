@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include"E:\Documents\IPN\LCD\02\ALGORITMOS Y ESTRUCTURAS DE DATOS\P\LISTA\ElemStr.h"
-#include"E:\Documents\IPN\LCD\02\ALGORITMOS Y ESTRUCTURAS DE DATOS\P\LISTA\Lista.h"
+#include"\ElemStr.h"
+#include"\List.h"
 
 int NumElemsLista(Lista);
 int NumElemsLista2(Lista);
@@ -17,17 +17,6 @@ int EstaEn(Elem,Lista);
 int Ocurrencias(Elem, Lista);
 Lista SubLista(Elem, Lista);
 Lista SubLista2(Elem,Elem,Lista);
-Lista SubLista3(Elem,Lista);
-/* Tarea!!!! */
-Lista Sustituye(Elem e1, Elem e2, Lista l);
-Lista InsertaFrenteElemN(int n, Elem e, Lista l);
-// Deber� inserta n veces e al inicio de l.
-Lista InsertaFinalElemN(int n, Elem e, Lista l);
-// Deber� inserta n veces e al final de l.
-// Hacer el desarrollo algebraico de SubLista2(20,25,l),
-// donde l=cons(20,cons(30,cons(40,cons(50,cons(60,cons(25,cons(90,vacia())))))));
-
-
 
 int main(){
    Lista l=vacia();
@@ -37,8 +26,6 @@ int main(){
    printf("Tecle palabras, <enter> para terminas.\n");
    while(SonDiferentesElem(e=LeeElem(),"#"))
          l=cons(e,l);
-
-
 
    while(SonDiferentesElem(e=LeeElem(),"$"))
          r=cons(e,r);
